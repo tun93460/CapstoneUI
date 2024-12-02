@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Header styling */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #d1bcbc;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .header .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .user-info span {
+            margin-right: 10px;
+        }
+
+        .header .user-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            background-color: #d1bcbc;
+            color: #fff;
+            padding: 10px;
+            font-size: 14px;
+            margin-top: auto;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            width: 250px;
+            background-color: #e5d6d3;
+            padding: 20px;
+            box-sizing: border-box;
+            height: calc(100vh - 60px); /* Adjusted for header and footer height */
+            overflow-y: auto;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+            font-size: 16px;
+        }
+
+        .sidebar ul li.active {
+            font-weight: bold;
+        }
+
+        /* Main content styling */
+        .main {
+            flex: 1;
+            background-color: #fdfdfd;
+            padding: 30px;
+        }
+
+        /* Profile Appearance Section */
+        .profile-section {
+            margin-bottom: 30px;
+        }
+
+        .profile-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .profile-section .profile-pic {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .profile-pic img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin-right: 20px;
+        }
+
+        .profile-pic button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Message Settings Section */
+        .message-section {
+            margin-top: 20px;
+        }
+
+        .message-section h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .toggle-container label {
+            font-size: 16px;
+        }
+
+        .toggle-container input {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>Temple Teaching Assist</div>
+        <div class="user-info">
+            <span>John Doe</span>
+            <div class="user-circle"></div>
+        </div>
+    </div>
+
+    <div class="content" style="display: flex;">
+        <div class="sidebar">
+            <ul>
+                <li class="active">Appearance</li>
+                <li>Messages</li>
+                <li>Course Settings</li>
+                <li>Display Settings</li>
+                <li>Personal Info</li>
+                <li>Notifications</li>
+                <li>Accessibility</li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="profile-section">
+                <h2>Appearance</h2>
+                <div class="profile-pic">
+                    <img src="#" alt="Profile Picture Placeholder">
+                    <button>Upload Photo</button>
+                </div>
+                <p>John Doe | email@domain.com</p>
+            </div>
+
+            <div class="message-section">
+                <h2>Messages</h2>
+                <div class="toggle-container">
+                    <label for="delete-logs">Automatically delete logs after 30 days</label>
+                    <input type="checkbox" id="delete-logs">
+                </div>
+                <div class="toggle-container">
+                    <label for="log-requests">Automatically log every time a request to a professor is sent</label>
+                    <input type="checkbox" id="log-requests">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Temple Teaching Assist
+    </footer>
+</body>
+</html>
