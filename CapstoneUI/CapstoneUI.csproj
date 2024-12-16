@@ -71,6 +71,7 @@
     <Content Include="Home.html" />
     <Content Include="Inbox.html" />
     <Content Include="Settings.html" />
+    <Content Include="style\teachingAssist.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
